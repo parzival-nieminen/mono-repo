@@ -1,0 +1,28 @@
+{
+  "root": "apps/kata-todo-e2e",
+  "sourceRoot": "apps/kata-todo-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/kata-todo-e2e/cypress.json",
+        "devServerTarget": "kata-todo:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "kata-todo:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/kata-todo-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["kata-todo"]
+}

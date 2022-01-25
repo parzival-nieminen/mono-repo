@@ -1,0 +1,73 @@
+{
+  "root": "apps/kata-todo",
+  "sourceRoot": "apps/kata-todo/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/kata-todo",
+        "index": "apps/kata-todo/src/index.html",
+        "baseHref": "/",
+        "main": "apps/kata-todo/src/main.tsx",
+        "polyfills": "apps/kata-todo/src/polyfills.ts",
+        "tsConfig": "apps/kata-todo/tsconfig.app.json",
+        "assets": [
+          "apps/kata-todo/src/favicon.ico",
+          "apps/kata-todo/src/assets"
+        ],
+        "styles": ["apps/kata-todo/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/kata-todo/src/environments/environment.ts",
+              "with": "apps/kata-todo/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "kata-todo:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "kata-todo:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/kata-todo/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/kata-todo"],
+      "options": {
+        "jestConfig": "apps/kata-todo/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
