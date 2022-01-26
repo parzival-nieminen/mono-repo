@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Else should render successfully 1`] = `null`;
+
+exports[`Else show text: Hello World 1`] = `"Hello World"`;

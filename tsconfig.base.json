@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@mono-repo/base": ["libs/base/src/index.js"],
       "@mono-repo/ui": ["libs/ui/src/index.js"]
     }
   },
