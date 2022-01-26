@@ -1,7 +1,9 @@
-import './kata-button.module.scss';
+import style from './kata-button.module.scss';
 import React, {Fragment, useEffect, useState} from "react";
 
-export const KataButton = ({disabled = false, text = "no label", ...props}) => {
+const func = (events, args) => [events, args]
+
+export const KataButton = ({disabled = false, text = "no label", onClick = func(), ...props}) => {
   const [comText, setComText] = useState(text);
   const [comDisabled, setComDisabled] = useState(disabled);
 
@@ -10,9 +12,13 @@ export const KataButton = ({disabled = false, text = "no label", ...props}) => {
     setComDisabled(disabled)
   }, [comDisabled, comText])
 
+  const comOnClick = (event) => {
+    onClick(event, `Button '${text}' is called`)
+  }
+
   return <Fragment>
-    <div className={comDisabled ? "KataButton:disabled" : "KataButton"}
-         role="button">{comText}</div>
+    <div role="button" className={comDisabled ? style.Disabled : style.KataButton}
+         onClick={comOnClick}>{comText}</div>
     <p>{props.children}</p>
   </Fragment>
 }

@@ -4,6 +4,7 @@ exports[`KataButton has no label as text 1`] = `
 Array [
   <div
     className="KataButton"
+    onClick={[Function]}
     role="button"
   >
     no label
@@ -15,7 +16,8 @@ Array [
 exports[`KataButton is disabled 1`] = `
 Array [
   <div
-    className="KataButton:disabled"
+    className="Disabled"
+    onClick={[Function]}
     role="button"
   >
     My Button
@@ -28,6 +30,7 @@ exports[`KataButton with subtext no data selected 1`] = `
 Array [
   <div
     className="KataButton"
+    onClick={[Function]}
     role="button"
   >
     Save
