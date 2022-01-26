@@ -1,4 +1,8 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "kata-todo": "apps/kata-todo",
+    "kata-todo-e2e": "apps/kata-todo-e2e",
+    "ui": "libs/ui"
+  }
 }

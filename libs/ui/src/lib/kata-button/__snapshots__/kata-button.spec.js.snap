@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KataButton has no label as text 1`] = `
+Array [
+  <div
+    className="KataButton"
+    role="button"
+  >
+    no label
+  </div>,
+  <p />,
+]
+`;
+
+exports[`KataButton is disabled 1`] = `
+Array [
+  <div
+    className="KataButton:disabled"
+    role="button"
+  >
+    My Button
+  </div>,
+  <p />,
+]
+`;
+
+exports[`KataButton with subtext no data selected 1`] = `
+Array [
+  <div
+    className="KataButton"
+    role="button"
+  >
+    Save
+  </div>,
+  <p>
+    no data selected
+  </p>,
+]
+`;
