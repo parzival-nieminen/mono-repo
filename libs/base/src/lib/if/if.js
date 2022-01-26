@@ -1,5 +1,3 @@
-import {Fragment} from "react";
-
 export const If = ({cond, children, ...props}) => {
   if (cond && Array.isArray(children)) {
     children = children?.filter(it => it?.type?.name !== "Else");
@@ -8,6 +6,6 @@ export const If = ({cond, children, ...props}) => {
       children = children?.filter(it => it?.type?.name === "Else");
     }
   }
-  return <Fragment {...props}>{children}</Fragment>
+  return <div {...props}>{children}</div>
 }
 export default If;

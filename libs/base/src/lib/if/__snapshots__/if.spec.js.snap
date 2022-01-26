@@ -1,18 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`If condition is false then show text: No World 1`] = `"No World"`;
-
-exports[`If condition is true then show text: Hello World 1`] = `
-Array [
+exports[`If condition is false then show text: No World 1`] = `
+<div>
   <div>
-    Hello
-  </div>,
-  <p>
-    World
-  </p>,
-]
+    No World
+  </div>
+</div>
 `;
 
-exports[`If condition is true then show text: ok 1`] = `" ok"`;
+exports[`If condition is true then show text: Hello World 1`] = `
+<div>
+  <div>
+    Hello
+  </div>
+  <p>
+    World
+  </p>
+</div>
+`;
 
-exports[`If no condition then return null 1`] = `null`;
+exports[`If condition is true then show text: ok 1`] = `
+<div>
+   ok
+</div>
+`;
+
+exports[`If no condition then return null 1`] = `<div />`;

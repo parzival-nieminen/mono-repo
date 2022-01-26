@@ -9,7 +9,7 @@ export function App() {
   }
 
   return <Fragment>
-    <p className={style.Foo}>Kata Todo</p>
+    <p>Kata Todo</p>
     <KataButton text="Cancel" onClick={func}>
       <div>Invalid info</div>
     </KataButton>

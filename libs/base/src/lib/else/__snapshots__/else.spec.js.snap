@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Else should render successfully 1`] = `null`;
+exports[`Else should render successfully 1`] = `<div />`;
 
-exports[`Else show text: Hello World 1`] = `"Hello World"`;
+exports[`Else show text: Hello World 1`] = `
+<div>
+  Hello World
+</div>
+`;
