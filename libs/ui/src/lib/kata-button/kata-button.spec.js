@@ -7,25 +7,22 @@ describe('KataButton', () => {
     const {baseElement} = render(<KataButton/>);
     expect(baseElement).toBeTruthy();
   });
-  it('is disabled',
-    () => {
-      const tree = renderer
-        .create(<KataButton disabled text={"My Button"}/>)
-        .toJSON();
-      expect(tree).toMatchSnapshot();
-    });
-  it('has no label as text',
-    () => {
-      const tree = renderer
-        .create(<KataButton/>)
-        .toJSON();
-      expect(tree).toMatchSnapshot();
-    });
-  it('with subtext no data selected',
-    () => {
-      const tree = renderer
-        .create(<KataButton text={"Save"}>no data selected</KataButton>)
-        .toJSON();
-      expect(tree).toMatchSnapshot();
-    });
+  it('is disabled', () => {
+    const tree = renderer
+      .create(<KataButton disabled text={"My Button"}/>)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('has no label as text', () => {
+    const tree = renderer
+      .create(<KataButton/>)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('with subtext no data selected', () => {
+    const tree = renderer
+      .create(<KataButton text={"Save"}>no data selected</KataButton>)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

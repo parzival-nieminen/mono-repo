@@ -1,0 +1,29 @@
+.KataButton {
+  background-color: #ffb325;
+  color: #282c34;
+  border-radius: 6px;
+  cursor: default;
+  padding: 8px 16px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  user-select: none;
+
+  :link, :visited {
+    background-color: #ffe583;
+    color: #282c34;
+  }
+
+  :hover, :active {
+    background-color: aquamarine;
+    color: #282c34;
+    cursor: pointer;
+  }
+
+  :disabled {
+    background-color: #f6faff;
+    color: #706769;
+    cursor: none;
+    font-style: italic;
+  }
+}

@@ -7,6 +7,6 @@ describe('App', () => {
   });
   it('should have a greeting as the title', () => {
     const { getByText } = render(<App />);
-    expect(getByText(/Welcome kata-todo/gi)).toBeTruthy();
+    expect(getByText(/Invalid info/gi)).toBeTruthy();
   });
 });

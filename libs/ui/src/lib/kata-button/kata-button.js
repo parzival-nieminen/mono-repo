@@ -1,7 +1,7 @@
 import './kata-button.module.scss';
-import {Fragment, useEffect, useState} from "react";
+import React, {Fragment, useEffect, useState} from "react";
 
-const KataButton = ({disabled = false, text = "no label", ...props}) => {
+export const KataButton = ({disabled = false, text = "no label", ...props}) => {
   const [comText, setComText] = useState(text);
   const [comDisabled, setComDisabled] = useState(disabled);
 
